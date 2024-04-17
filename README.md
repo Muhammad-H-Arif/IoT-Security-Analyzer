@@ -20,10 +20,22 @@ IoT Device Security Analyzer is a Python-based tool designed to scan and analyze
 
 ## Installation
 
+### Clone the Repository
 ```bash
 git clone https://github.com/your-username/iot-device-security-analyzer.git
 cd iot-device-security-analyzer
+```
+
+### Install the Required Packages
+```bash
 pip install -r requirements.txt
+```
+
+### Download the Requirements
+If you need to download the requirements manually, you can use the following command:
+
+```bash
+pip download -r requirements.txt -d /path/to/download/directory
 ```
 
 ## Usage
@@ -69,6 +81,26 @@ python iot_analyzer.py --help
 }
 ```
 
+## Parameters and Functions
+
+### Functions
+
+- **scan_open_ports**: Scans all TCP ports on the device and identifies open ports.
+- **attempt_ssh_login**: Attempts SSH login using default or provided credentials.
+- **check_ssl_certificate**: Validates the SSL certificate of the device's web interface.
+- **check_known_vulnerabilities**: Queries public CVE databases for known vulnerabilities associated with the device.
+- **suggest_mitigations**: Suggests actions to mitigate identified security risks.
+- **analyze_security**: Performs a full security analysis combining all of the above functions.
+- **run_analysis_from_file**: Runs a security analysis on multiple devices from a JSON file.
+
+### Command-Line Arguments
+
+- `--file`: Path to the JSON file containing IP addresses and URLs for batch processing.
+- `--ip`: IP address of the IoT device for single device analysis.
+- `--url`: URL of the IoT device (optional, used for SSL certificate validation).
+- `--credentials`: Path to a JSON file containing custom credentials for SSH login attempts.
+- `--help`: Displays help information.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -76,3 +108,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contributing
 
 Feel free to submit pull requests or open issues to improve this tool.
+
+
