@@ -31,13 +31,6 @@ cd iot-device-security-analyzer
 pip install -r requirements.txt
 ```
 
-### Download the Requirements
-If you need to download the requirements manually, you can use the following command:
-
-```bash
-pip download -r requirements.txt -d /path/to/download/directory
-```
-
 ## Usage
 
 ### Analyze a Single Device
